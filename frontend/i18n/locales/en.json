@@ -1,0 +1,265 @@
+{
+  "common": {
+    "brand": "Haeun Portfolio",
+    "nav": {
+      "home": "Home",
+      "resume": "Resume",
+      "project": "Projects",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "footer": {
+      "crafted": "Design & Code crafted with Next.js"
+    },
+    "languagesLabel": "Language"
+  },
+  "home": {
+    "metadata": {
+      "title": "Home",
+      "description": "Portfolio of Haeun, a frontend developer who loves UI design and JavaScript.",
+      "openGraph": {
+        "title": "Frontend Developer Haeun",
+        "description": "A frontend engineer who brings UI details to life and collaborates seamlessly.",
+        "type": "website"
+      }
+    },
+    "roleTag": "Frontend Developer",
+    "headline": [
+      "I'm Haeun, a developer who loves UI design",
+      "and JavaScript."
+    ],
+    "description": [
+      "I translate diverse UI into reliable interfaces and partner closely with product teams.",
+      "Always learning, always refining the details of the product experience."
+    ],
+    "cards": [
+      { "label": "📕 RESUME", "href": "/resume" },
+      { "label": "💻 PROJECTS", "href": "/project" },
+      { "label": "📮 CONTACT", "href": "/contact" },
+      { "label": "🔗 BLOG", "href": "/blog" }
+    ]
+  },
+  "resume": {
+    "metadata": {
+      "title": "Resume",
+      "description": "Explore Haeun's frontend experience, skill set, education, and certifications.",
+      "openGraph": {
+        "title": "Haeun Resume",
+        "description": "Frontend engineer with experience across energy, shared kitchen, and healthcare services.",
+        "type": "profile"
+      }
+    },
+    "heroTitle": "Frontend engineer who enjoys both UI design and JavaScript",
+    "heroDescription": "I deliver pixel-perfect UI, communicate smoothly with product partners, and care deeply about craft.",
+    "experiences": [
+      {
+        "company": "H Energy",
+        "period": "May 2020 - Aug 2022",
+        "role": "Frontend Engineer",
+        "summary": "Owned the UI for rooftop solar platform Mohaet and VPP forecasting services.",
+        "details": [
+          "Implemented REST API integrations with Pug/Stylus-based UI",
+          "Visualized investment and generation data using Chart.js and SVG maps",
+          "Built Kakao Map integrations, social sharing, and promotional pages deployed via Firebase"
+        ]
+      },
+      {
+        "company": "Geeks Family (ICT-glab)",
+        "period": "Dec 2019 - Apr 2020",
+        "role": "Frontend Engineer",
+        "summary": "Developed admin dashboards and POS UI for shared kitchen and delivery founders.",
+        "details": [
+          "Created admin UI and analytics pages with JavaScript, jQuery, and SCSS",
+          "Delivered Chart.js dashboards for orders and delivery metrics",
+          "Collaborated through Jira, Wiki, Slack, and Zeplin with cross-functional partners"
+        ]
+      },
+      {
+        "company": "Fine Insight (Bestian Hospital)",
+        "period": "Aug 2016 - Jan 2019",
+        "role": "UI/UX Designer",
+        "summary": "Designed healthcare information systems, mobile apps, and brand assets.",
+        "details": [
+          "Crafted the UI for burn-care tele-consult app 'WeePias'",
+          "Designed PC/mobile sites for clinical trial and health screening centers",
+          "Produced brochures, magazines, and large-format promotional materials"
+        ]
+      }
+    ],
+    "skillGroups": [
+      {
+        "title": "Markup",
+        "items": ["HTML/CSS", "SCSS", "Pug", "Stylus"]
+      },
+      {
+        "title": "Frontend",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Redux",
+          "Redux Toolkit",
+          "Vue2",
+          "Vue3",
+          "jQuery"
+        ]
+      },
+      {
+        "title": "Backend",
+        "items": ["Node.js", "Python"]
+      },
+      {
+        "title": "Tools",
+        "items": ["Figma", "Zeplin", "Adobe CC", "Slack", "Jira", "Confluence"]
+      }
+    ],
+    "educations": [
+      {
+        "title": "Kookmin University · Industrial Design B.A.",
+        "period": "Dec 2019 - Apr 2020"
+      },
+      {
+        "title": "Soldesk · Java Web Developer Bootcamp",
+        "period": "May 2019 - Nov 2019"
+      }
+    ],
+    "certificates": [
+      {
+        "title": "Engineer Information Processing",
+        "issuer": "HRD Korea",
+        "year": "Aug 2019"
+      },
+      {
+        "title": "Industrial Engineer Information Processing",
+        "issuer": "HRD Korea",
+        "year": "Aug 2019"
+      }
+    ]
+  },
+  "project": {
+    "metadata": {
+      "title": "Projects",
+      "description": "Case studies covering experiment automation, onboarding redesign, and design system ops.",
+      "openGraph": {
+        "title": "Haeun Projects",
+        "description": "Explore experiment ops, SaaS onboarding, and design system automation work.",
+        "type": "article"
+      }
+    },
+    "heroTitle": "Defining problems and validating with data",
+    "heroDescription": "Case studies where I shaped hypotheses, designed the experience, and shipped code.",
+    "projects": [
+      {
+        "title": "Experiment Pipeline Automation",
+        "year": "2024",
+        "period": "Jan 2024 - Jun 2024",
+        "impact": "+14% conversion",
+        "summary": "Automated growth experiment workflows and tripled the number of tests the team could ship.",
+        "stack": ["Next.js", "TypeScript", "Design Token", "Zustand"],
+        "thumbnail": ""
+      },
+      {
+        "title": "SaaS Onboarding Redesign",
+        "year": "2023",
+        "period": "Mar 2023 - Sep 2023",
+        "impact": "+28% activation",
+        "summary": "Segmented onboarding journeys and redesigned in-app guides for clarity.",
+        "stack": ["Figma", "Amplitude", "React", "Storybook"],
+        "thumbnail": ""
+      },
+      {
+        "title": "Design System Ops",
+        "year": "2022",
+        "period": "May 2022 - Dec 2022",
+        "impact": "+40% UI consistency",
+        "summary": "Connected token sources to deployment pipelines for real-time updates across surfaces.",
+        "stack": ["Style Dictionary", "GitHub Actions", "Chromatic"],
+        "thumbnail": ""
+      }
+    ]
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Reach out for collaborations, coffee chats, or speaking invitations.",
+      "openGraph": {
+        "title": "Haeun Contact",
+        "description": "Preferred contact channels and collaboration styles.",
+        "type": "website"
+      }
+    },
+    "heroTitle": "Let's start the next conversation",
+    "heroDescription": "Project kickoffs, casual chats, and speaking invites all get a reply within a week.",
+    "channels": [
+      {
+        "label": "Email",
+        "value": "hello@haeun.dev",
+        "href": "mailto:hello@haeun.dev"
+      },
+      {
+        "label": "Slack",
+        "value": "haeunpark"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/haeunpark",
+        "href": "https://linkedin.com/in/haeunpark"
+      }
+    ],
+    "sections": {
+      "channels": "Direct channels",
+      "collaboration": "Preferred collaborations",
+      "form": "Quick intro"
+    },
+    "preferenceIntro": "Best fit with B2B SaaS teams that embrace experimentation.",
+    "preferences": [
+      "Product strategy or design system consulting (4-6 weeks)",
+      "Growth experiment planning and delivery",
+      "Workshops and team diagnostics"
+    ],
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "messageLabel": "Message",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "you@example.com",
+      "messagePlaceholder": "Share the project context, goals, or timeline.",
+      "submit": "Send message"
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "Blog",
+      "description": "Notes on experiment culture, design systems, and cross-functional collaboration.",
+      "openGraph": {
+        "title": "Haeun Blog",
+        "description": "Product design and frontend insights from real projects.",
+        "type": "article"
+      }
+    },
+    "heroTitle": "Working notes from real experiments",
+    "heroDescription": "Documenting problems the team faced and the paths we took to solve them.",
+    "posts": [
+      {
+        "title": "Design handoff tactics that keep experiment velocity high",
+        "date": "2024-10-28",
+        "category": "Experiment Ops",
+        "summary": "A workflow that lets squads consume design output faster without losing fidelity."
+      },
+      {
+        "title": "Bridging design-dev with Design Tokens",
+        "date": "2024-07-12",
+        "category": "Design System",
+        "summary": "Lessons learned while wiring a token sync pipeline end to end."
+      },
+      {
+        "title": "What the data told us about SaaS onboarding",
+        "date": "2023-12-03",
+        "category": "Growth",
+        "summary": "Combining quantitative and qualitative insights to narrow down the real blocker."
+      }
+    ],
+    "dateLocale": "en-US",
+    "readMoreLabel": "Read article →"
+  }
+}

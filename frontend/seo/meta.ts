@@ -1,69 +1,23 @@
+/**
+ * SEO 메타데이터 설정
+ * next-seo와 Next.js Metadata API를 함께 사용
+ */
+
 import type { Metadata } from "next";
-import {
-  buildLanguageAlternates,
-  createCanonicalUrl,
-  ogLocaleMap,
-  siteUrl,
-  type Locale,
-} from "@/i18n/config";
+import { defaultSEO } from "@/seo/config";
+import { seoToMetadata, buildLocalizedMetadata as buildLocalizedMetadataUtil } from "@/lib/seo-utils";
+import { siteUrl } from "@/i18n/config";
 
-const defaultSiteName = "Haeun Portfolio";
-
+/**
+ * 기본 메타데이터 (next-seo 설정 기반)
+ */
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: defaultSiteName,
-    template: `%s | ${defaultSiteName}`,
-  },
-  description:
-    "Frontend developer Haeun Park's portfolio across resume, projects, contact, and blog.",
-  keywords: ["portfolio", "frontend", "resume", "projects", "blog", "contact"],
-  openGraph: {
-    title: defaultSiteName,
-    description:
-      "Explore Haeun Park's resume, representative projects, blog posts, and contact information.",
-    url: siteUrl,
-    siteName: defaultSiteName,
-    type: "website",
-  },
-  alternates: {
-    canonical: siteUrl,
-  },
+  ...seoToMetadata(defaultSEO),
 };
 
-type OpenGraphInput = {
-  title: string;
-  description: string;
-  type: "website" | "profile" | "article";
-  siteName?: string;
-};
-
-export type LocalizedMetaInput = {
-  title: string;
-  description: string;
-  openGraph: OpenGraphInput;
-};
-
-export const buildLocalizedMetadata = (
-  locale: Locale,
-  path: string,
-  meta: LocalizedMetaInput,
-): Metadata => {
-  const url = createCanonicalUrl(locale, path);
-
-  return {
-    title: meta.title,
-    description: meta.description,
-    openGraph: {
-      ...meta.openGraph,
-      url,
-      locale: ogLocaleMap[locale],
-      siteName: meta.openGraph.siteName ?? defaultSiteName,
-    },
-    alternates: {
-      canonical: url,
-      languages: buildLanguageAlternates(path),
-    },
-  };
-};
+/**
+ * 로케일별 메타데이터 생성 (next-seo 기반)
+ */
+export { buildLocalizedMetadataUtil as buildLocalizedMetadata };
 
