@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // 프로덕션 빌드 최적화
+  output: "standalone",
+  
   images: {
     remotePatterns: [
       {
@@ -14,6 +17,16 @@ const nextConfig: NextConfig = {
         hostname: "**.wordpress.com",
         pathname: "/wp-content/**",
       },
+      // 프로덕션 WordPress 도메인 추가
+      ...(process.env.WP_IMAGE_DOMAIN
+        ? [
+            {
+              protocol: "https" as const,
+              hostname: process.env.WP_IMAGE_DOMAIN,
+              pathname: "/wp-content/**",
+            },
+          ]
+        : []),
     ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -34,7 +47,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Frame-Options",
-            value: "DENY",
+            value: "SAMEORIGIN",
           },
           {
             key: "X-XSS-Protection",

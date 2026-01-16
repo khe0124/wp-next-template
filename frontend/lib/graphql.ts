@@ -2,7 +2,10 @@
  * WPGraphQL 클라이언트 설정
  */
 
-const WP_GRAPHQL_URL = process.env.WP_GRAPHQL_URL || "http://localhost:8000/graphql";
+const WP_GRAPHQL_URL =
+  process.env.WP_GRAPHQL_URL ||
+  process.env.NEXT_PUBLIC_WP_GRAPHQL_URL ||
+  "http://localhost:8000/graphql";
 
 export interface WPGraphQLResponse<T> {
   data: T;

@@ -1,0 +1,26 @@
+[Unit]
+Description=Next.js Application
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/wp-next-template/frontend
+Environment="NODE_ENV=production"
+Environment="PORT=3000"
+EnvironmentFile=/var/www/wp-next-template/frontend/.env.production
+ExecStart=/usr/bin/node /var/www/wp-next-template/frontend/.next/standalone/server.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# 보안 설정
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/wp-next-template/frontend
+
+[Install]
+WantedBy=multi-user.target
